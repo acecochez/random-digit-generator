@@ -1,55 +1,70 @@
 # RANDOM NUMBER GENERATOR
-import random
-numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+
+# Importing sample
+from random import sample
+
+# Number list
+nums = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+
+# Spacing line
 def sp():
     print("-" * 35)
 
-def numbergenerator():
+# Amount of digits
+def numgen():
     print("\nGenerate random digits")
     digits = input("Type a number up to 5: ")
     for num in digits:
+
+        # Generate 1 digit
         if digits == "1":
             print("\nYour", digits, "randomized digit is:")
-            print(random.sample(numbers, k=1))
+            print(sample(nums, k=1))
             sp()
-            numbergenerator()
+            numgen()
             break
 
+        # Generate 2 digits
         if digits == "2":
             print("\nYour", digits, "randomized digits are:")
-            print(random.sample(numbers, k=2))
+            print(sample(nums, k=2))
             sp()
-            numbergenerator()
+            numgen()
             break
 
+        # Generate 3 digits
         if digits == "3":
             print("\nYour", digits, "randomized digits are:")
-            print(random.sample(numbers, k=3))
+            print(sample(nums, k=3))
             sp()
-            numbergenerator()
+            numgen()
             break
-
+        
+        # Generate 4 digits
         if digits == "4":
             print("\nYour", digits, "randomized digits are:")
-            print(random.sample(numbers, k=4))
+            print(sample(nums, k=4))
             sp()
-            numbergenerator()
+            numgen()
             break
 
+        # Generate 5 digits
         if digits == "5":
             print("\nYour", digits, "randomized digits are:")
-            print(random.sample(numbers, k=5))
+            print(sample(nums, k=5))
             sp()
-            numbergenerator()
+            numgen()
             break
-                  
+
+        # Invalid input   
         else:
             print("\nInvalid input! Try again.")
             sp()
-            numbergenerator()
+            numgen()
             break
 
+# Launch
 sp()
 print("Welcome to the random number generator!")
 sp()
-numbergenerator()
+numgen()
